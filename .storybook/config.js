@@ -30,7 +30,7 @@ addDecorator(story => <Demo story={story} />);
 setOptions({
   name: 'Rebass',
   url: 'http://jxnblk.com/rebass',
-  showDownPanel: false,
+  showDownPanel: true,
 });
 
 // const req = require.context('.', true, /\.jsx$/);

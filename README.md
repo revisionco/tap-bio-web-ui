@@ -12,3 +12,11 @@
 - `yarn install`
 - `yarn start`
 - work
+
+## Use
+
+- `import { ComponentName } from '@tap-bio/web-ui';`
+- `import theme from '@tap-bio/web-ui/theme';`
+- `import styled from '@tap-bio/web-ui/styled-components';`
+- `import Rebass from '@tap-bio/web-ui/rebass';`
+- `import { RebassComponentName } from '@tap-bio/web-ui/rebass';`

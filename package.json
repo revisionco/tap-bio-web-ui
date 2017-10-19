@@ -17,8 +17,7 @@
     "@storybook/react": "^3.2.12",
     "prettier": "^1.7.4",
     "react-scripts": "1.0.14",
-    "refunk": "^1.0.0-2",
-    "storybook-addon-jsx": "^5.0.0"
+    "refunk": "^1.0.0-2"
   },
   "scripts": {
     "start": "NODE_PATH=. start-storybook -p 9009 -s public",
