@@ -53,6 +53,12 @@
   dependencies:
     "@storybook/addons" "^3.2.12"
 
+"@storybook/addon-options@^3.2.12":
+  version "3.2.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.2.12.tgz#1f3023bd3f676279466cf5816da2c920c08dc119"
+  dependencies:
+    "@storybook/addons" "^3.2.12"
+
 "@storybook/addons@^3.2.12":
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.12.tgz#61adccaa8c0016f1439dc8934d8d61042b35e741"
@@ -6578,6 +6584,12 @@ redux@^3.7.2:
     lodash-es "^4.2.1"
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
+
+refunk@^1.0.0-2:
+  version "1.0.0-2"
+  resolved "https://registry.yarnpkg.com/refunk/-/refunk-1.0.0-2.tgz#6da7459a5d7380070b1177c4d233dfe1f9c1efdd"
+  dependencies:
+    prop-types "^15.5.10"
 
 regenerate@^1.2.1:
   version "1.3.3"

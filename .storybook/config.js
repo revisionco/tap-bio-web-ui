@@ -1,16 +1,44 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-// import JSXAddon from 'storybook-addon-jsx';
+import { setOptions } from '@storybook/addon-options';
+import { injectGlobal } from 'styled-components';
+import { Box } from 'grid-styled';
+import { Provider } from 'rebass';
 
 addDecorator(story => <div style={{ textAlign: 'center' }}>{story()}</div>);
 addDecorator(withKnobs);
-// addDecorator(JSXAddon);
 
-const req = require.context('../src/components', true, /\.stories\.js$/);
+injectGlobal([], {
+  '*': {
+    boxSizing: 'border-box',
+  },
+  body: {
+    lineHeight: 1.5,
+    margin: 0,
+  },
+});
 
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
+const Demo = props => (
+  <Provider>
+    <Box p={3}>{props.story()}</Box>
+  </Provider>
+);
 
-configure(loadStories, module);
+addDecorator(story => <Demo story={story} />);
+
+setOptions({
+  name: 'Rebass',
+  url: 'http://jxnblk.com/rebass',
+  showDownPanel: false,
+});
+
+// const req = require.context('.', true, /\.jsx$/);
+const req = require.context('../src/stories', true, /\.jsx$/);
+
+const load = () => {
+  // require('./Library')
+  req.keys().forEach(req);
+};
+
+configure(load, module);
