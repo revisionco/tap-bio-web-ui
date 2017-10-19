@@ -34,7 +34,7 @@ setOptions({
 });
 
 // const req = require.context('.', true, /\.jsx$/);
-const req = require.context('../src/stories', true, /\.jsx$/);
+const req = require.context('../stories', true, /\.jsx$/);
 
 const load = () => {
   // require('./Library')
