@@ -1,0 +1,46 @@
+{
+  "name": "@tap-bio/web-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "rebass": "^1.0.4",
+    "styled-components": "^2.2.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-info": "^3.2.12",
+    "@storybook/addon-knobs": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "prettier": "^1.7.4",
+    "react-scripts": "1.0.14",
+    "storybook-addon-jsx": "^5.0.0"
+  },
+  "scripts": {
+    "start": "NODE_PATH=. start-storybook -p 9009 -s public",
+    "build": "NODE_PATH=. build-storybook -s public",
+    "test": "NODE_PATH=. react-scripts test --env=jsdom"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 100,
+    "cssEnable": [
+      "css",
+      "less",
+      "scss"
+    ],
+    "javascriptEnable": [
+      "javascript",
+      "javascriptreact"
+    ],
+    "jsonEnable": [
+      "json"
+    ],
+    "graphqlEnable": [
+      "graphql"
+    ]
+  }
+}
