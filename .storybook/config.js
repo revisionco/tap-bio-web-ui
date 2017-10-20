@@ -5,6 +5,7 @@ import { setOptions } from '@storybook/addon-options';
 import { injectGlobal } from 'styled-components';
 import { Box } from 'grid-styled';
 import { Provider } from 'rebass';
+import theme from '../theme';
 
 addDecorator(story => <div style={{ textAlign: 'center' }}>{story()}</div>);
 addDecorator(withKnobs);
@@ -20,7 +21,7 @@ injectGlobal([], {
 });
 
 const Demo = props => (
-  <Provider>
+  <Provider theme={theme}>
     <Box p={3}>{props.story()}</Box>
   </Provider>
 );

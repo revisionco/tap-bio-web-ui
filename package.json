@@ -4,9 +4,11 @@
   "private": true,
   "main": "lib/index.js",
   "dependencies": {
+    "chroma": "^0.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "rebass": "^1.0.4",
+    "recompose": "^0.26.0",
     "styled-components": "^2.2.1"
   },
   "devDependencies": {
@@ -36,14 +38,29 @@
     "trailingComma": "all",
     "singleQuote": true,
     "printWidth": 100,
-    "cssEnable": ["css", "less", "scss"],
-    "javascriptEnable": ["javascript", "javascriptreact"],
-    "jsonEnable": ["json"],
-    "graphqlEnable": ["graphql"]
+    "cssEnable": [
+      "css",
+      "less",
+      "scss"
+    ],
+    "javascriptEnable": [
+      "javascript",
+      "javascriptreact"
+    ],
+    "jsonEnable": [
+      "json"
+    ],
+    "graphqlEnable": [
+      "graphql"
+    ]
   },
   "babel": {
-    "presets": ["react-app"],
-    "ignore": ["*.test.js"]
+    "presets": [
+      "react-app"
+    ],
+    "ignore": [
+      "*.test.js"
+    ]
   },
   "nodemonConfig": {
     "ext": "js,jsx"

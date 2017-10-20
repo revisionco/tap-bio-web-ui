@@ -1,19 +1,35 @@
+import chroma from 'chroma-js';
+
+const gray = {
+  dark: '#031530',
+  light: '#F5F7F8',
+  names: ['gray10', 'gray20', 'gray30', 'gray40', 'gray50', 'gray60', 'gray70', 'gray80', 'gray90'],
+};
+
+const purple = {
+  light: '#9013fe',
+  dark: '#570b99',
+  names: ['darkPurple', 'purple'],
+};
+
+const getColorScale = color =>
+  color.names.reduce(function(acc, name, index) {
+    const len = color.names.length;
+    const step = index / (len - 1);
+    acc[name] = chroma.scale([color.dark, color.light])(step).hex();
+    return acc;
+  }, {});
+
 export default {
-  breakpoints: [
-    // min-width breakpoints in ems
-    40,
-    52,
-    64,
-  ],
-  space: [0, 6, 12, 18, 24, 30, 36],
-  fontSizes: [12, 16, 18, 24, 36, 48, 72],
-  weights: [400, 600],
+  breakpoints: [32, 48, 64, 80],
+  space: [0, 4, 8, 16, 32, 64, 128],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
+  weights: [400, 700],
   colors: {
-    black: '#111',
-    white: '#fff',
-    blue: '#07c',
+    ...getColorScale(gray),
+    ...getColorScale(purple),
   },
-  font: 'Georgia, serif',
-  monospace: '"Roboto Mono", Menlo, monospace',
-  radius: 2,
+  radius: 4,
+  font: '-apple-system, BlinkMacSystemFont, sans-serif',
+  monospace: '"SF Mono", "Roboto Mono", Menlo, monospace',
 };
