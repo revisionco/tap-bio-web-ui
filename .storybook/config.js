@@ -5,7 +5,7 @@ import { setOptions } from '@storybook/addon-options';
 import { injectGlobal } from 'styled-components';
 import { Box } from 'grid-styled';
 import { Provider } from 'rebass';
-import theme from '../theme';
+import theme from '../src/theme';
 
 addDecorator(story => <div style={{ textAlign: 'center' }}>{story()}</div>);
 addDecorator(withKnobs);

@@ -31,36 +31,21 @@
     "predist": "rm -fr lib/",
     "dist": "NODE_PATH=. NODE_ENV=production babel src/ -d lib/",
     "watch": "nodemon -w src -x yarn dist",
-    "build": "NODE_PATH=. build-storybook -s public",
+    "build": "NODE_PATH=. build-storybook -s public -o docs/",
     "test": "NODE_PATH=. react-scripts test --env=jsdom"
   },
   "prettier": {
     "trailingComma": "all",
     "singleQuote": true,
     "printWidth": 100,
-    "cssEnable": [
-      "css",
-      "less",
-      "scss"
-    ],
-    "javascriptEnable": [
-      "javascript",
-      "javascriptreact"
-    ],
-    "jsonEnable": [
-      "json"
-    ],
-    "graphqlEnable": [
-      "graphql"
-    ]
+    "cssEnable": ["css", "less", "scss"],
+    "javascriptEnable": ["javascript", "javascriptreact"],
+    "jsonEnable": ["json"],
+    "graphqlEnable": ["graphql"]
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "ignore": [
-      "*.test.js"
-    ]
+    "presets": ["react-app"],
+    "ignore": ["*.test.js"]
   },
   "nodemonConfig": {
     "ext": "js,jsx"

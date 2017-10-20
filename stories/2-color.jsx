@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Flex, Box, Pre } from 'src';
-import theme from '../theme';
+import theme from '../src/theme';
 
 console.log(theme);
 
