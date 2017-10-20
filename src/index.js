@@ -48,7 +48,7 @@ export { PanelFooter } from 'rebass';
 export { PanelHeader } from 'rebass';
 export { Pre } from 'rebass';
 export { default as Progress } from './components/progress';
-export { Provider } from 'rebass';
+export { default as Provider } from './components/provider';
 export { Radio } from 'rebass';
 export { Relative } from 'rebass';
 export { Row } from 'rebass';
