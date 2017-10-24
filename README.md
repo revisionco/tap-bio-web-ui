@@ -15,11 +15,33 @@
 
 ## Use
 
+### Set up your project
+
+- `import { Provider } from '@tap-bio/web-ui';`
+- `import theme from '@tap-bio/web-ui/lib/theme';`
+- wrap your app in the Provider component:
+
+```js
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
+### Consume a component in your application
+
 - `import { ComponentName } from '@tap-bio/web-ui';`
-- `import theme from '@tap-bio/web-ui/theme';`
-- `import styled from '@tap-bio/web-ui/styled-components';`
-- `import Rebass from '@tap-bio/web-ui/rebass';`
-- `import { RebassComponentName } from '@tap-bio/web-ui/rebass';`
+- `<ComponentName />`
+
+### Import Styled Components to make style adjustments to components
+
+- `import styled from '@tap-bio/web-ui/lib/styled-components';`
+- `const FancyComponent = styled(ComponentName)``;`
+
+### Use rebass directly
+
+- `import Rebass from '@tap-bio/web-ui/lib/rebass';`
+- `import { RebassComponentName } from '@tap-bio/web-ui/lib/rebass';`
+- `<RebassComponentName />`
 
 ## TODO
 
