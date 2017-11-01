@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "main": "lib/index.js",
+  "scripts": {
+    "start": "yarn watch & yarn storybook",
+    "storybook": "NODE_PATH=. start-storybook -p 9009 -s public",
+    "predist": "rm -fr lib/",
+    "dist": "NODE_PATH=. NODE_ENV=production babel src/ -d lib/",
+    "watch": "nodemon -w src -x yarn dist",
+    "build": "NODE_PATH=. build-storybook -s public -o docs/",
+    "release": "yarn dist && yarn build",
+    "test": "NODE_PATH=. react-scripts test --env=jsdom"
+  },
   "dependencies": {
     "chroma": "^0.0.1",
     "react": "^16.0.0",
@@ -24,15 +34,6 @@
     "prettier": "^1.7.4",
     "react-scripts": "1.0.14",
     "refunk": "^1.0.0-2"
-  },
-  "scripts": {
-    "start": "yarn watch & yarn storybook",
-    "storybook": "NODE_PATH=. start-storybook -p 9009 -s public",
-    "predist": "rm -fr lib/",
-    "dist": "NODE_PATH=. NODE_ENV=production babel src/ -d lib/",
-    "watch": "nodemon -w src -x yarn dist",
-    "build": "NODE_PATH=. build-storybook -s public -o docs/",
-    "test": "NODE_PATH=. react-scripts test --env=jsdom"
   },
   "prettier": {
     "trailingComma": "all",

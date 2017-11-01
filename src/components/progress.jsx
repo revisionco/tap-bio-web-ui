@@ -1,10 +1,10 @@
 // import React from 'react';
 import styled from 'styled-components';
-import { Progress as RebassProgress } from 'rebass';
+import { Progress as Base } from 'rebass';
 import theme from '../theme';
 import { compose, withProps } from 'recompose';
 
-const Progress = styled(RebassProgress)`
+const Progress = styled(Base)`
   &::-webkit-progress-bar {
     background-color: ${props => props.bg};
   }

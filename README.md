@@ -17,6 +17,7 @@
 
 ### Set up your project
 
+- load Roboto in `public/index.html` `<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">`
 - `import { Provider } from '@tap-bio/web-ui';`
 - `import theme from '@tap-bio/web-ui/lib/theme';`
 - wrap your app in the Provider component:

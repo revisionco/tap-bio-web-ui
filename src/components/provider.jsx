@@ -1,7 +1,7 @@
-import { Provider as ProviderBase } from 'rebass';
+import { Provider as Base } from 'rebass';
 import styled from 'styled-components';
 
-const Provider = styled(ProviderBase)`
+const Provider = styled(Base)`
   display: inline;
 `;
 

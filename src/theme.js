@@ -12,6 +12,12 @@ const purple = {
   names: ['darkPurple', 'purple'],
 };
 
+const blue = {
+  light: '#459beb',
+  dark: '#126dee',
+  names: ['darkBlue', 'blue'],
+};
+
 const getColorScale = color =>
   color.names.reduce(function(acc, name, index) {
     const len = color.names.length;
@@ -28,8 +34,9 @@ export default {
   colors: {
     ...getColorScale(gray),
     ...getColorScale(purple),
+    ...getColorScale(blue),
   },
   radius: 4,
-  font: '-apple-system, BlinkMacSystemFont, sans-serif',
+  font: 'Roboto Regular, Roboto, sans-serif',
   monospace: '"SF Mono", "Roboto Mono", Menlo, monospace',
 };

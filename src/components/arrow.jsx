@@ -1,9 +1,7 @@
 // import React from 'react';
 import styled from 'styled-components';
-import { Arrow as RebassArrow } from 'rebass';
+import { Arrow as Base } from 'rebass';
 
-const Arrow = styled(RebassArrow)`
-  color: red;
-`;
+const Arrow = styled(Base)``;
 
 export default Arrow;
