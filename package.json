@@ -33,7 +33,7 @@
     "concurrently": "^3.5.0",
     "nodemon": "^1.12.1",
     "prettier": "^1.7.4",
-    "react-scripts": "1.0.14",
+    "react-scripts": "1.0.17",
     "refunk": "^1.0.0-2"
   },
   "prettier": {
