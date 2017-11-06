@@ -6,11 +6,11 @@
   "scripts": {
     "start": "yarn watch & yarn storybook",
     "storybook": "NODE_PATH=. start-storybook -p 9009 -s public",
+    "release": "yarn dist && yarn build",
     "predist": "rm -fr lib/",
     "dist": "NODE_PATH=. NODE_ENV=production babel src/ -d lib/",
     "watch": "nodemon -w src -x yarn dist",
     "build": "NODE_PATH=. build-storybook -s public -o docs/",
-    "release": "yarn dist && yarn build",
     "test": "NODE_PATH=. react-scripts test --env=jsdom"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "@storybook/addon-options": "^3.2.12",
     "@storybook/react": "^3.2.12",
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "concurrently": "^3.5.0",
     "nodemon": "^1.12.1",
     "prettier": "^1.7.4",
@@ -45,7 +46,7 @@
     "graphqlEnable": ["graphql"]
   },
   "babel": {
-    "presets": ["react-app"],
+    "presets": ["react-app", "env"],
     "ignore": ["*.test.js"]
   },
   "nodemonConfig": {

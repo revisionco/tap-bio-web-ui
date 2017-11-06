@@ -11,7 +11,6 @@ const Progress = styled(Base)`
 `;
 
 const useBgColorByName = withProps(props => {
-  console.log(props);
   return theme.colors[props.bg] ? { bg: theme.colors[props.bg] } : { bg: props.bg };
 });
 
