@@ -1,8 +1,15 @@
-import { Provider as Base } from 'rebass';
-import styled from 'styled-components';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import defaultTheme from '../theme';
 
-const Provider = styled(Base)`
-  display: inline;
-`;
+const Provider = ({ theme, ...props }) => {
+  return <ThemeProvider theme={{ ...defaultTheme, ...theme }} {...props} />;
+};
+
+Provider.defaultProps = {
+  theme: {},
+};
+
+Provider.displayName = 'WebUI.Rebass.Provider';
 
 export default Provider;
