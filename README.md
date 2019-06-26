@@ -1,3 +1,8 @@
+# UPDATE: Jun 26, 2019
+
+This repo has been deprecated and archived. 
+
+
 # React UI for TapBio front-end web applications
 
 ## Stack
