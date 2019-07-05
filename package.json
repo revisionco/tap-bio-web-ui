@@ -35,6 +35,9 @@
     "react-scripts": "1.0.17",
     "refunk": "^1.0.0-2"
   },
+  "resolutions": {
+    "styled-components": "3.4.10"
+  },
   "prettier": {
     "trailingComma": "all",
     "singleQuote": true,
